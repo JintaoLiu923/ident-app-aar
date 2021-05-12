@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\ndk\\21.3.6528147\\build\\cmake\\platforms.cmake",
+    "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\ndk\\21.3.6528147\\build\\cmake\\android.toolchain.cmake",
+    "E:\\ident\\RefactorCode\\PublishPlugin\\app\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\ident\\RefactorCode\\PublishPlugin\\app\\.cxx\\cmake\\release\\armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"E:\\ident\\RefactorCode\\PublishPlugin\\app\\.cxx\\cmake\\release\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "JniTools-Release-armeabi-v7a": {
+      "artifactName": "JniTools",
+      "buildCommand": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\ident\\RefactorCode\\PublishPlugin\\app\\.cxx\\cmake\\release\\armeabi-v7a\" JniTools",
+      "abi": "armeabi-v7a",
+      "output": "E:\\ident\\RefactorCode\\PublishPlugin\\app\\libs\\armeabi-v7a\\libJniTools.so",
+      "runtimeFiles": []
+    }
+  }
+}

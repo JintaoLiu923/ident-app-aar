@@ -1,0 +1,6 @@
+package com.newbie3d.yishop.app.utils.bcrypt4front;
+
+public class KeyUtil {
+    //服务端的RSA公钥(Base64编码)
+    public final static String APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkuhuuA1/cconi9t9G05AT3nLIdkkfrI7V+0ywNfX4GO6D8sqSNotjUnrTUWRIqLMl5f0Rg3BZc4mTExqR9ae6s1k7dys4k90bKYOrXC4t5YgRunZMkAOPFKTwnpHcXcGYaYcTiUlhIw/1GVBpKXF4PO/qqO5CRpQZ0epSOtM5H14BwlfrS6/d3YAl2LHcOExBs97EmWmzcTKknnro6XXqGye0oTZwPwd66ZFPVCbq3H1LO61jGUZYvACwCFqutUtdRQtzPQt2bcwuqq+g1hAlDpZPRKnG+nPicHkGpNpyfS7GcjzlW4xHUkC1691wqziDaR9lOj+xxYhk4h4gzZn7wIDAQAB";
+}

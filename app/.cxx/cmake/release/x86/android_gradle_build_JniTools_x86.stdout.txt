@@ -1,0 +1,2 @@
+ninja: Entering directory `E:\ident\RefactorCode\PublishPlugin\app\.cxx\cmake\release\x86'
+ninja: no work to do.

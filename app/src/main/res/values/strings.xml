@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PublisherPlugin</string>
+    <string name="TAG2Server_Success">标签成功发送给服务器</string>
+    <string name="text_plugin">插件</string>
+    <string name="text_logUploadResult">日志上传响应结果:</string>
+    <string name="text_abnormalLogUpLoadFailed">异常日志上传失败:</string>
+    <string name="text_startConf">开始配置流程</string>
+    <string name="text_stopReadTmp">停止测温流程</string>
+    <string name="text_startReadTmp">开始读取温控流程</string>
+    <string name="text_NowTime">当前时间:</string>
+    <string name="text_effectiveTime">有效时间:</string>
+    <string name="text_tokenNotBeOverdue">Token没有过期</string>
+    <string name="text_StartNDEFDefine">开始NDEF自定义流程</string>
+    <string name="text_startNDEFRead">开始NDEF读取流程</string>
+    <string name="text_startCert">开始发证流程</string>
+    <string name="text_certConfStart">发证配置信息请求开始</string>
+    <string name="text_certConfEnd">发证配置信息请求结束</string>
+    <string name="text_certReadEnd">发证读取状态位信息结束</string>
+    <string name="text_certReadStart">发证读取状态位信息开始</string>
+    <string name="text_certUploadStart">发证确认上传信息开始</string>
+    <string name="text_startAnalysis">开始解析</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:background="#3296FA"
+    android:layout_height="44dp">
+    <ImageView
+        android:padding="15dp"
+        android:id="@+id/iv_back"
+        android:src="@mipmap/ic_back"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"></ImageView>
+    <TextView
+        android:id="@+id/tv_title"
+        android:text="发证应用"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+</LinearLayout>

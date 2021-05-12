@@ -1,0 +1,13 @@
+[
+{
+  "directory": "E:/ident/RefactorCode/PublishPlugin/app/.cxx/cmake/release/x86",
+  "command": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=i686-none-linux-android16 --gcc-toolchain=C:/Users/Administrator/AppData/Local/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Administrator/AppData/Local/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DJniTools_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -o CMakeFiles\\JniTools.dir\\src\\main\\cpp\\encodenas.c.o   -c E:\\ident\\RefactorCode\\PublishPlugin\\app\\src\\main\\cpp\\encodenas.c",
+  "file": "E:/ident/RefactorCode/PublishPlugin/app/src/main/cpp/encodenas.c"
+},
+
+{
+  "directory": "E:/ident/RefactorCode/PublishPlugin/app/.cxx/cmake/release/x86",
+  "command": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=i686-none-linux-android16 --gcc-toolchain=C:/Users/Administrator/AppData/Local/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Administrator/AppData/Local/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DJniTools_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -o CMakeFiles\\JniTools.dir\\src\\main\\jni\\JniTools.c.o   -c E:\\ident\\RefactorCode\\PublishPlugin\\app\\src\\main\\jni\\JniTools.c",
+  "file": "E:/ident/RefactorCode/PublishPlugin/app/src/main/jni/JniTools.c"
+}
+]

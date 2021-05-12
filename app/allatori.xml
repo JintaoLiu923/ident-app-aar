@@ -1,0 +1,150 @@
+<config>
+    <input>
+        <dir in="${classesRoot}" out="${classesRoot}-obfuscated" />
+        <!-- Kotlin support -->
+        <!--<dir in="${kotlinRoot}" out="${kotlinRoot}-obfuscated"/>-->
+    </input>
+
+    <classpath>
+        <jar name="${androidJar}" />
+        <jar name="${classpathJars}" />
+    </classpath>
+
+    <ignore-classes>
+        <class template="class *Application*" />
+        <class template="class *springframework*" />
+        <class template="class *servlet*" />
+        <class template="class *jdbc*" />
+        <class template="class *jni*" />
+        <class template="class *alibaba*" />
+        <class template="class *persistence*" />
+
+        <class template="class *javax*" />
+        <class template="class *jackson*" />
+        <class template="class *fastjson*" />
+        <class template="class *qcloud*" />
+        <class template="class *github*" />
+        <class template="class *Test*" />
+        <class template="class *easymock*" />
+        <class template="class *apache*" />
+        <class template="class *Observer" />
+        <class template="class com.loc.**" />
+        <class template="class com.amap.**" />
+
+        <class template="class * implements java.lang.Runnable" />
+        <class template="class * implements android.nfc.NdefRecord" />
+        <class template="class * implements com.amap.api.location.AMapLocationListener" />
+        <class template="class * implements okhttp3.Interceptor" />
+        <class template="class * implements io.reactivex.Observer" />
+
+        <class template="interface * implements *RequestListener*" />
+        <class template="class * implements *RequestListener*" />
+        <class template="interface * implements *DetailListener*" />
+        <class template="class * implements *DetailListener*" />
+        <class template="interface * implements *TagNfcaListener*" />
+        <class template="class * implements *TagNfcaListener*" />
+        <class template="interface * implements *TagNfcvListener*" />
+        <class template="class * implements *TagNfcvListener*" />
+
+
+
+        <class template="class com.hachi.publishplugin.enums.*" />
+        <class template="class * instanceof com.hachi.publishplugin.enums.TagErrorEnum">
+            <method template="void set*(**)" />
+            <method template="get*(**)" />
+        </class>
+        <class template="class * instanceof *.HashMap">
+            <method template="void set*(**)" />
+            <method template="get*(**)" />
+        </class>
+        <class template="class com.hachi.publishplugin.bean.*" />
+        <class template="class com.hachi.publishplugin.internet.*" />
+
+    </ignore-classes>
+
+    <keep-names>
+        <class access="protected+">
+            <field access="protected+" />
+            <method access="protected+" />
+        </class>
+        <class template="public class * instanceof android.app.Activity">
+            <method template="public void *(android.view.View)" />
+        </class>
+        <class template="public class * instanceof android.view.View">
+            <method template="public void set*(**)" />
+            <method template="get*(**)" />
+        </class>
+
+        <class template="class * extends java.lang.Enum">
+            <method template="values()" />
+            <method template="valueOf(java.lang.String)" />
+        </class>
+
+        <class template="class **.R**">
+            <field access="private+" />
+            <method template="private+ *(**)" />
+        </class>
+
+        <class template="public class com.hachi.publishplugin.internet.OkHttp">
+            <field access="private+" />
+            <method template="private+ *(**)" />
+        </class>
+
+        <class template="public class *GlobelRasFunc*">
+            <field access="private+" />
+            <method template="private+ *(**)" />
+        </class>
+        <class template="public class *Plugin*">
+            <field template="static *sResultBean*" />
+            <field template="static *mTagBean*" />
+            <field template="static *tagType*" />
+            <method template="initData()" />
+        </class>
+
+        <class template="public class * instanceof android.app.Application" />
+        <class template="public class * instanceof android.app.Service" />
+        <class template="public class * instanceof android.content.BroadcastReceiver" />
+        <class template="public class * instanceof android.content.ContentProvider" />
+        <class template="public class * instanceof android.app.backup.BackupAgentHelper" />
+        <class template="public class * instanceof android.preference.Preference" />
+        <class template="public class com.android.vending.licensing.ILicensingService" />
+        <class template="public class com.google.android.vending.licensing.ILicensingService" />
+        <class
+            template="public interface implements com.google.android.vending.licensing.ILicensingService" />
+        <class template="public class com.google.android.vending.licensing.ILicensingService" />
+        <class template="public interface * implements *RequestListener*" />
+        <class template="public interface * implements *DetailListener*" />
+        <class template="public interface * implements *TagNfcvListener*" />
+        <class template="public interface * implements *TagNfcaListener*" />
+        <class template="public class * implements *RequestListener*" />
+        <class template="public class * implements *DetailListener*" />
+        <class template="public class * implements *TagNfcvListener*" />
+        <class template="public class * implements *TagNfcaListener*" />
+    </keep-names>
+    <!--    <property name="string-encryption" value="enable"/>-->
+    <!--    <property name="string-encryption-type" value="fast"/>-->
+    <!--    <property name="string-encryption-version" value="v4"/>-->
+
+    <!--    <property name="control-flow-obfuscation" value="enable"/>-->
+    <!--    <property name="extensive-flow-obfuscation" value="normal"/>-->
+
+    <!--    <property name="default-package" value="o"/>-->
+    <!--    <property name="force-default-package" value="enable"/>-->
+    <!--    <property name="classes-naming" value="abc"/>-->
+    <!--    <property name="methods-naming" value="compact"/>-->
+    <!--    <property name="fields-naming" value="compact"/>-->
+    <!--    <property name="local-variables-naming" value="optimize"/>-->
+    <!--    <property name="update-resource-names" value="enable"/>-->
+    <!--    <property name="update-resource-contents" value="enable"/>-->
+    <!--    <property name="string-encryption" value="enable"/>-->
+    <!--    <property name="string-encryption-type" value="fast"/>-->
+    <!--    <property name="control-flow-obfuscation" value="enable"/>-->
+    <!--    <property name="extensive-flow-obfuscation" value="normal"/>-->
+    <!--    <property name="default-package" value="a.b.c.d"/>-->
+    <!--    <property name="force-default-package" value="enable"/>-->
+    <!--    <property name="classes-naming" value="abc"/>-->
+    <!--    <property name="methods-naming" value="iii"/>-->
+    <!--    <property name="fields-naming" value="iii"/>-->
+    <!--    <property name="member-reorder" value="enable"/>-->
+    <!--    <property name="line-numbers" value="keep"/>-->
+</config>

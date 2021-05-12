@@ -1,0 +1,5 @@
+# ninja log v5
+4	413	617259360	CMakeFiles/JniTools.dir/src/main/cpp/encodenas.c.o	35e4344b5293b89a
+103	507	617259360	CMakeFiles/JniTools.dir/src/main/jni/JniTools.c.o	a1d87c938a5773f2
+508	1131	617259361	../../../../libs/x86_64/libJniTools.so	8b800ac5de309311
+0	162	0	clean	81a0c8a35c45b8df

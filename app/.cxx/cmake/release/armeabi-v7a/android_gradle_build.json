@@ -1,0 +1,48 @@
+{
+  "stringTable": {
+    "0": "E:/ident/RefactorCode/PublishPlugin/app/.cxx/cmake/release/armeabi-v7a",
+    "1": "--target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Administrator/AppData/Local/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Administrator/AppData/Local/Android/Sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DJniTools_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Oz -DNDEBUG -fPIC"
+  },
+  "buildFiles": [
+    "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\ndk\\21.3.6528147\\build\\cmake\\platforms.cmake",
+    "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\ndk\\21.3.6528147\\build\\cmake\\android.toolchain.cmake",
+    "E:\\ident\\RefactorCode\\PublishPlugin\\app\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\ident\\RefactorCode\\PublishPlugin\\app\\.cxx\\cmake\\release\\armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"E:\\ident\\RefactorCode\\PublishPlugin\\app\\.cxx\\cmake\\release\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "JniTools-Release-armeabi-v7a": {
+      "buildCommand": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\ident\\RefactorCode\\PublishPlugin\\app\\.cxx\\cmake\\release\\armeabi-v7a\" JniTools",
+      "buildType": "release",
+      "toolchain": "942235468",
+      "abi": "armeabi-v7a",
+      "artifactName": "JniTools",
+      "files": [
+        {
+          "src": "E:\\ident\\RefactorCode\\PublishPlugin\\app\\src\\main\\cpp\\encodenas.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "E:\\ident\\RefactorCode\\PublishPlugin\\app\\src\\main\\jni\\JniTools.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "E:\\ident\\RefactorCode\\PublishPlugin\\app\\libs\\armeabi-v7a\\libJniTools.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "942235468": {
+      "cCompilerExecutable": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\ndk\\21.3.6528147\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

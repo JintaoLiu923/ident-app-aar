@@ -1,0 +1,3 @@
+E:/ident/RefactorCode/PublishPlugin/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/JniTools.dir
+E:/ident/RefactorCode/PublishPlugin/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
+E:/ident/RefactorCode/PublishPlugin/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir

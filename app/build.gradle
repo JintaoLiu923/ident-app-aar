@@ -1,0 +1,129 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+//        applicationId "com.hachi.publishplugin"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 2
+        versionName "2.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        ndk {
+//            //设置支持的SO库架构
+//            abiFilters 'arm64-v8a'//, 'x86'
+//        }
+
+        //Allator混淆
+        libraryVariants.all { variant ->
+            variant.javaCompileProvider.get().doLast {
+//                runAllatori(variant)  //ljt debug
+            }
+            // 复制aar到指定目录
+            variant.assemble.doLast {
+                variant.outputs.all { output ->
+                    def outputPath1 = "D:\\2021-1-28\\V2.0\\ident-app-biz\\app\\libs"
+                    copy {
+                        from output.outputFile
+                        into outputPath1
+                    }
+                    def outputPath3 = "D:\\smartLock\\lock_bc_android_java-master\\SmartLock\\app\\libs"
+                    copy {
+                        from output.outputFile
+                        into outputPath3
+                    }
+                    def outputPath4 = "D:\\smartLock\\lock_bc_android_java-master\\SmartLock\\module_base\\libs"
+                    copy {
+                        from output.outputFile
+                        into outputPath4
+                    }
+                    def outputPath2 = "D:\\2021-1-28\\V2.0\\ident-app-biz\\module_base\\libs"
+                    copy {
+                        from output.outputFile
+                        into outputPath2
+                    }
+                }
+            }
+        }
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath true } }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+//    externalNativeBuild {
+//        cmake {
+//            path file('CMakeLists.txt')
+//        }
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    ndkVersion '21.3.6528147'
+}
+
+def runAllatori(variant) {
+    copy {
+        from "$projectDir/allatori.xml"
+        into "$buildDir/intermediates/classes/"
+        expand(classesRoot: variant.javaCompileProvider.get().destinationDir,
+                kotlinRoot: "${buildDir}/tmp/kotlin-classes/${variant.name}",
+                androidJar: "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar",
+                classpathJars: variant.javaCompileProvider.get().classpath.getAsPath(),
+                logFile: "allatori-log-${variant.name}.xml")
+        rename('allatori.xml', "allatori-${variant.name}.xml")
+    }
+
+    new File("${variant.javaCompileProvider.get().destinationDir}-" +
+            "").deleteDir()
+    javaexec {
+        main = 'com.allatori.Obfuscate'
+        classpath = files("$rootDir/allatori/allatori.jar")
+        args "$buildDir/intermediates/classes/allatori-${variant.name}.xml"
+    }
+    new File("${variant.javaCompileProvider.get().destinationDir}").deleteDir()
+    new File("${variant.javaCompileProvider.get().destinationDir}-obfuscated").renameTo(new File("${variant.javaCompileProvider.get().destinationDir}"))
+    // Kotlin support
+    // new File("${buildDir}/tmp/kotlin-classes/${variant.name}").deleteDir()
+    // new File("${buildDir}/tmp/kotlin-classes/${variant.name}-obfuscated").renameTo(new File("${buildDir}/tmp/kotlin-classes/${variant.name}"))
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation files('../allatori/allatori.jar')
+    implementation files('../allatori/allatori-annotations.jar')
+    implementation 'android.arch.work:work-runtime:1.0.1'
+    //高德二维地图
+    implementation files('libs/AMap_Location_V5.1.0_20200708.jar')
+//    implementation files('libs/AMap3DMap_7.7.0_AMapSearch_7.7.0_20201027.jar')
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //注解
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor "com.jakewharton:butterknife-compiler:10.2.3"
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+//    RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+    //Lombok
+    implementation 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    //okGo
+    implementation 'com.lzy.net:okgo:2.1.4'
+    //老酒蓝牙工具
+//    implementation 'cn.com.scca:bluetooth-tools:0.0.30'
+    //阿里json解析工具
+    implementation 'com.alibaba:fastjson:1.2.75'
+}
