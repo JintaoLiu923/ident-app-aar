@@ -126,4 +126,5 @@ dependencies {
 //    implementation 'cn.com.scca:bluetooth-tools:0.0.30'
     //阿里json解析工具
     implementation 'com.alibaba:fastjson:1.2.75'
+
 }

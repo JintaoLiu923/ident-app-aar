@@ -11,7 +11,7 @@ public class LogUtil {
     private static final int WARN = 4;
     private static final int ERROR = 5;
     private static final int NOTHING = 6;
-    private static final int level = 0; //ljt debug VERBOSE
+    private static final int level = NOTHING; //ljt debug VERBOSE
 
     public static void v(String tag, String msg) {
         msg = "Debug：" + msg;
